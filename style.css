@@ -1,0 +1,32 @@
+@font-face {
+  font-family: CharisSILW;
+  src: url(fonts/CharisSIL-Regular.woff2);
+}
+@font-face {
+  font-family: CharisSILW;
+  font-weight: bold;
+  src: url(fonts/CharisSIL-Bold.woff2);
+}
+
+body {
+  font-family: CharisSILW, sans-serif;
+  font-size: 1rem;
+}
+
+h1 {
+  font-weight: normal;
+  margin: 20px;
+}
+
+a {
+  color: black;
+}
+
+main {
+  margin: 40px auto;
+  max-width: 800px;
+}
+
+footer {
+  text-align: center;
+}
