@@ -2,6 +2,7 @@
   font-family: CharisSILW;
   src: url(fonts/CharisSIL-Regular.woff2);
 }
+
 @font-face {
   font-family: CharisSILW;
   font-weight: bold;
@@ -12,9 +13,19 @@ body {
   font-family: CharisSILW, sans-serif;
 }
 
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header {
+  margin: 20px;
+}
+
 h1 {
   font-weight: normal;
-  margin: 20px;
+  margin: 0;
 }
 
 a {
@@ -26,6 +37,19 @@ main {
   max-width: 800px;
 }
 
+article {
+  padding-left: 30px;
+}
+
+.code {
+  font-family: "Courier New", Courier, monospace;
+  padding: 10px 20px;
+}
+
 footer {
   text-align: center;
+  padding: 40px;
+}
+
+.git-logo {
 }
