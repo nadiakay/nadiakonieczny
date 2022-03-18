@@ -3,7 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="description" content="Nadia Konieczny homepage" />
+    <meta
+      name="description"
+      content="Nadia Konieczny's homepage - web development and computing"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <title>Welcome! - Nadia Konieczny</title>
@@ -11,45 +14,53 @@
 
   <body>
     <header>
-      <h1>Nadia Konieczny</h1>
-      <a href="https://github.com/nadiakay/huffman-code">
-        <img src="GitHub-Mark-32px.png" class="git-icon" alt="GitHub logo"
-      /></a>
+      <h1><a class="nav-h1" href="./index.html">Nadia Konieczny</a></h1>
+      <ul class="nav">
+        <li class="nav-li">
+          <a class="nav-link" href="./articles">Writing</a>
+        </li>
+        <li class="nav-li">
+          <a class="nav-link" href="./links.html">Links</a>
+        </li>
+        <li class="nav-li">
+          <a class="nav-link" href="./contact.html">Contact</a>
+        </li>
+      </ul>
     </header>
 
     <main>
-      <p>
-        Hi, I'm Nadia. I'm currently studying electrical engineering at the
-        University of Minnesota. I'm interested in computing systems and signals
-        of all kinds.
-      </p>
-      <p>
-        You can check out my web projects and other code on
-        <a href="http://github.com/nadiakay">GitHub</a>, or see my art on
-        <a href="https://nadia-kapusta.neocities.org">Neocities</a>.
-      </p>
-      <p>
-        I wrote
-        <a href="https://nadiakonieczny.com/huffman.html">an article</a> on
-        Huffman code algorithms and made
-        <a href="https://nadiakay.github.io/huffman-code/"
-          >a Javascript web app</a
-        >
-        to demonstrate it.
-      </p>
-      <p>
-        I keep <a href="https://complinks.carrd.co/">a list of resources</a> on
-        various topics in computing and systems, including C and Javascript
-        programming, UNIX history, signal processing, and information theory.
-      </p>
-      <p>
-        Thanks for visiting. I hope to have more to share here in the future.
-        You can email me at: nadiakonieczny [at] outlook.com
-      </p>
+      <h2>Welcome!</h2>
+      <article>
+        <p>
+          Hi, I'm Nadia. I'm studying at the University of Minnesota for
+          electrical engineering. Before that I was studying web development,
+          and I've made some different webpages and articles. I'm interested in
+          computing systems and signals of all kinds, and this website is a
+          collection of what I've been learning.
+        </p>
+        <p>
+          You can check out my web projects and other code on
+          <a href="http://github.com/nadiakay">GitHub</a>, or see my art on
+          <a href="https://nadia-kapusta.neocities.org">Neocities</a>.
+        </p>
+        <p>
+          I wrote
+          <a href="https://nadiakonieczny.com/huffman.html">an article</a> on
+          Huffman code algorithms and made
+          <a href="https://nadiakay.github.io/huffman-code/"
+            >a Javascript web app</a
+          >
+          to demonstrate it.
+        </p>
+        <p>
+          I keep
+          <a href="./links.html">a list of links</a> to resources including
+          guides and historical background on topics like UNIX, C and
+          Javascript, signal processing, information theory, and analog
+          electronics.
+        </p>
+        <p>You can email me at: nadiakonieczny [at] outlook.com</p>
+      </article>
     </main>
-
-    <footer>
-      <p>by Nadia</p>
-    </footer>
   </body>
 </html>

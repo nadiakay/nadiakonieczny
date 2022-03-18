@@ -5,26 +5,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta
       name="description"
-      content="huffman code algorithm lossless compression guide by Nadia Konieczny"
+      content="Huffman code algorithm guide for lossless compression"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Huffman Coding - Nadia Konieczny</title>
+    <link rel="stylesheet" href="../style.css" />
+    <title>Huffman Code Algorithm - Nadia Konieczny</title>
   </head>
 
   <body>
-    <h1>Nadia Konieczny</h1>
+    <header>
+      <h1><a class="nav-h1" href="/index.html">Nadia Konieczny</a></h1>
+      <ul class="nav">
+        <li class="nav-li">
+          <a class="nav-link" href="/articles">Writing</a>
+        </li>
+        <li class="nav-li">
+          <a class="nav-link" href="/links.html">Links</a>
+        </li>
+        <li class="nav-li">
+          <a class="nav-link" href="/contact.html">Contact</a>
+        </li>
+      </ul>
+    </header>
 
     <main>
-      <h2>Huffman Code Algorithm</h2>
+      <div class="article-head">
+        <h2>Huffman Code Algorithm</h2>
+        <em><small>March 16, 2022</small></em>
+      </div>
+
       <article>
         <p>
           Are you fascinated by data but overwhelmed by its sheer quantity? Are
           you running out of storage space often, or encountering slow speeds
           when uploading or downloading? Then you probably understand how useful
           compression can be. In this article I describe a simple but clever
-          encoding technique widely used for compression, and present an
-          interactive app to visualize the process.
+          encoding technique widely used for compression, and present
+          <a href="https://nadiakay.github.io/huffman">an interactive app</a> to
+          visualize the process.
         </p>
 
         <p>
@@ -118,7 +136,7 @@
           items left, which we pair together to form the final binary tree.
         </p>
 
-        <p>Let&rsquo;s try it!</p>
+        <p>Let&rsquo;s try it:</p>
 
         <p>First we want to sort our frequency list from above by frequency:</p>
 
@@ -194,9 +212,11 @@
 
         <p>
           Following the same process, we can encode any digitally representable
-          data. You can try it out with this Javascript app: just enter some
-          text, and it&rsquo;ll show you the binary tree, dictionary, and
-          encoded binary string.
+          data. You can try it out with
+          <a href="https://nadiakay.github.io/huffman"
+            >this demonstration in JavaScript</a
+          >. Just enter some text, and it&rsquo;ll show you the binary tree,
+          dictionary, and encoded binary string.
         </p>
 
         <p>
@@ -223,7 +243,7 @@
               href="http://compression.ru/download/articles/huff/huffman_1952_minimum-redundancy-codes.pdf"
               >A Method for the Construction of Minimum-Redundancy Codes</a
             >, David Huffman, 1952. First published description of the algorithm
-            by its developer
+            by its developer.
           </li>
         </ul>
       </article>
