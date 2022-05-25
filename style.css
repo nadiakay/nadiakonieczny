@@ -43,6 +43,10 @@ ul {
   list-style-type: none;
 }
 
+li {
+  margin-bottom: 0.6em;
+}
+
 article {
   padding: 0 20px;
 }
