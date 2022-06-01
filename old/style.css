@@ -1,14 +1,14 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 @font-face {
   font-family: CharisSILW;
-  src: url(fonts/CharisSIL-Regular.woff2);
+  src: url(/fonts/CharisSIL-Regular.woff2);
 }
 
 @font-face {
   font-family: CharisSILW;
   font-weight: bold;
-  src: url(fonts/CharisSIL-Bold.woff2);
+  src: url(/fonts/CharisSIL-Bold.woff2);
 }
 
 body {
@@ -57,8 +57,8 @@ footer {
 }
 
 em {
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .article-head {
@@ -83,7 +83,7 @@ em {
 }
 
 .nav-link {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -91,7 +91,7 @@ em {
 }
 
 .code {
-  font-family: "Courier New", Courier, monospace;
+  font-family: 'Courier New', Courier, monospace;
   padding: 10px 20px;
 }
 
