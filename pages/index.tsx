@@ -129,7 +129,7 @@ const Home: NextPage = () => {
         </section>
       </main>
 
-      <footer className="flex h-24 mt-8 w-full items-center justify-center border-t">
+      <footer className="bg-gradient-to-b from-white to-blue-200 flex h-24 mt-8 w-full items-center justify-center border-t">
         <a
           className="flex items-center justify-center gap-2"
           href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
