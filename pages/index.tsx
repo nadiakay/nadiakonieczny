@@ -25,19 +25,16 @@ const Home: NextPage = () => {
           <Link href="./portfolio">
             <a>Portfolio</a>
           </Link>
-          <Link href="./articles">
-            <a>Resume</a>
+          <Link href="./contact">
+            <a>Contact</a>
           </Link>
-          <li>
-            <a href="./contact">Contact</a>
-          </li>
         </ul>
       </header>
 
       <h1 className="font-serif italic font-b text-white text-3xl w-full px-8 p-5 mb-12 bg-gradient-to-r from-fuchsia-400 to-blue-400">
         <a href="./index.html">Nadia Konieczny</a>
       </h1>
-      <main className="font-serif z-40 flex w-full flex-1 flex-col items-center justify-center px-2 md:px-20">
+      <main className="font-sans z-40 flex w-full flex-1 flex-col items-center justify-center px-2 md:px-20">
         <section className="relative top-0 bottom-0 left-0 right-0 w-full h-full">
           <div className="flex flex-row justify-between mb-8">
             <div className="flex flex-col text-left space-y-2">
@@ -63,6 +60,7 @@ const Home: NextPage = () => {
             familiar with Java and C. I'm passionate about my work and projects
             and I'm eager to work on a team.
           </p>
+
           <h1 className="text-xl mx-4">Portfolio</h1>
           <div className="flex max-w-4xl flex-wrap items-center justify-around sm:w-full">
             <a
@@ -71,8 +69,8 @@ const Home: NextPage = () => {
             >
               <h3 className="text-xl font-bold">Free Book Archive &rarr;</h3>
               <p className="mt-4 text-lg">
-                Free public domain book collection in an accessible and
-                mobile-friendly web format.
+                Free, public domain ebook collection hosted in mobile-friendly,
+                web-readable html.
               </p>
               <p className="mt-4 italic text-md">
                 Javascript, React.js, Next.js
@@ -86,8 +84,8 @@ const Home: NextPage = () => {
                 Mediawiki Book Scripts &rarr;
               </h3>
               <p className="mt-4 text-lg">
-                A set of scripts written for the process of transferring
-                documents for the Free Book Archive project.
+                A collection of scripts to process Wikisource books for use in
+                Next.js applications.
               </p>
               <p className="mt-4 italic text-md">Python, BeautifulSoup</p>
             </a>
