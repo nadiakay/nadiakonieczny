@@ -5,10 +5,27 @@ import Link from 'next/link'
 
 const Home: NextPage = () => {
   return (
-    <div className="flex min-h-screen max-w-5xl mx-auto flex-col items-center justify-center ">
+    <div className="flex min-h-screen flex-col items-center justify-center ">
       <Head>
         <title>Index - Nadia Konieczny</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/favicon/apple-touch-icon.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon/favicon-16x16.png"
+        />
+        <link rel="manifest" href="/favicon/site.webmanifest" />
         <link
           href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
           rel="stylesheet"
@@ -19,9 +36,11 @@ const Home: NextPage = () => {
         />
       </Head>
       <div></div>
-      <header className="p-2 z-40 backdrop-blur-xl flex flex-row w-full  justify-between items-center mb-8">
-        <span></span>
-        <ul className="flex flex-row items-center space-x-5">
+      <header className="z-40 backdrop-blur-xl flex flex-row w-full  justify-between px-4 items-center">
+        <span>
+          <Image src="/favicon/favicon-32x32.png" width={32} height={32} />
+        </span>
+        <ul className="font-bold uppercase flex flex-row items-center justify-center py-4 space-x-5">
           <Link href="./portfolio">
             <a>Portfolio</a>
           </Link>
@@ -31,11 +50,19 @@ const Home: NextPage = () => {
         </ul>
       </header>
 
-      <h1 className="font-serif italic font-b text-white text-3xl w-full px-8 p-5 mb-12 bg-gradient-to-r from-fuchsia-400 to-blue-400">
+      <h1 className="font-serif italic font-b text-white text-3xl w-full px-8 p-5 mb-16 bg-gradient-to-r from-fuchsia-500 to-blue-500">
         <a href="./index.html">Nadia Konieczny</a>
       </h1>
-      <main className="font-sans z-40 flex w-full flex-1 flex-col items-center justify-center px-2 md:px-20">
-        <section className="relative top-0 bottom-0 left-0 right-0 w-full h-full">
+      <main className="max-w-5xl mx-auto font-sans text-slate-700 z-40 flex w-full flex-1 flex-col items-center justify-center px-2 pb-8 md:px-20">
+        <section className="text-center mb-16 text-slate-800">
+          <h2 className="text-3xl mb-4">Frontend Developer</h2>
+          <h3 className="text-xl">
+            React.js&nbsp;&nbsp;&middot;&nbsp;&nbsp;Next.js&nbsp;&nbsp;&middot;&nbsp;&nbsp;Redux.js
+            &nbsp;&nbsp;&middot;&nbsp;&nbsp;Bootstrap&nbsp;&nbsp;&middot;&nbsp;&nbsp;Tailwind
+            CSS
+          </h3>
+        </section>
+        <section className="">
           <div className="flex flex-row justify-between mb-8">
             <div className="flex flex-col text-left space-y-2">
               <p>Nadia Konieczny</p>
@@ -53,21 +80,23 @@ const Home: NextPage = () => {
             </div>
           </div>
 
-          <p className="mx-8 mb-8">
+          <p className="mx-8 mb-8 leading-relaxed">
             Hello! I'm a computer science student at the University of
-            Minnesota. This site is my professional homepage and portfolio. My
-            development experience is mostly in Javascript and Python. I'm also
-            familiar with Java and C. I'm passionate about my work and projects
-            and I'm eager to work on a team.
+            Minnesota. My experience is mostly in Javascript, specifically
+            React. I'm also familiar with Python, Java, and C. I'm passionate
+            about the projects I work on and learning new technologies, and I'm
+            eager to work on a team.
           </p>
 
-          <h1 className="text-xl mx-4">Portfolio</h1>
+          <h1 className="text-2xl text-slate-900 mx-4">Portfolio</h1>
           <div className="flex max-w-4xl flex-wrap items-center justify-around sm:w-full">
             <a
               href="https://github.com/nadiakay/free-book-archive"
               className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
             >
-              <h3 className="text-xl font-bold">Free Book Archive &rarr;</h3>
+              <h3 className="text-xl font-bold text-slate-900">
+                Free Book Archive &rarr;
+              </h3>
               <p className="mt-4 text-lg">
                 Free, public domain ebook collection hosted in mobile-friendly,
                 web-readable html.
@@ -80,7 +109,7 @@ const Home: NextPage = () => {
               href="https://github.com/nadiakay/free-book-archive"
               className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
             >
-              <h3 className="text-xl font-bold">
+              <h3 className="text-xl font-bold text-slate-900">
                 Mediawiki Book Scripts &rarr;
               </h3>
               <p className="mt-4 text-lg">
@@ -92,12 +121,13 @@ const Home: NextPage = () => {
 
             <a
               href="https://github.com/nadiakay/huffman-code"
-              className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
+              className="bg-white mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
             >
-              <h3 className="text-xl font-bold">Huffman Code &rarr;</h3>
+              <h3 className="text-xl font-bold text-slate-900">
+                Huffman Code &rarr;
+              </h3>
               <p className="mt-4 text-lg">
-                Visualization of the Huffman code algorithm implemented by a
-                binary tree.
+                Visualization of the Huffman code algorithm.
               </p>
               <p className="mt-4 italic text-md">Javascript</p>
             </a>
@@ -106,7 +136,9 @@ const Home: NextPage = () => {
               href="https://github.com/nadiakay/gallerize"
               className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
             >
-              <h3 className="text-xl font-bold">Gallerize &rarr;</h3>
+              <h3 className="text-xl font-bold text-slate-900">
+                Gallerize &rarr;
+              </h3>
               <p className="mt-4 text-lg">
                 Public domain photo gallery. Search from millions of public
                 domain images available through Openverse API.
@@ -121,6 +153,10 @@ const Home: NextPage = () => {
               className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
             >
               <h3 className="text-xl font-bold">Stream Stats &rarr;</h3>
+              <p className="mt-4 text-lg">
+                Get info on the most popular music artists today. Data from
+                Last.fm API.
+              </p>
               <p className="mt-4 italic text-md">
                 Javascript, React.js, Redux.js
               </p>
@@ -129,10 +165,10 @@ const Home: NextPage = () => {
         </section>
       </main>
 
-      <footer className="bg-gradient-to-b from-white to-blue-200 flex h-24 mt-8 w-full items-center justify-center border-t">
+      <footer className="border-t border-slate-300 flex h-24 mb-8 w-full items-center justify-center">
         <a
-          className="flex items-center justify-center gap-2"
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+          className="text-slate-500 flex items-center justify-center gap-2"
+          href="/"
           target="_blank"
           rel="noopener noreferrer"
         >
