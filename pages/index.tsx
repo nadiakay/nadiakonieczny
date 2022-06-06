@@ -1,9 +1,29 @@
 import type { NextPage } from 'next'
+import { useState } from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
+import { InferGetStaticPropsType } from 'next'
+import Card from '../components/Card'
+import { ICard } from '../types'
+import { data } from '../data'
 
-const Home: NextPage = () => {
+export async function getStaticProps() {
+  const cards: ICard[] = data
+
+  return {
+    props: {
+      cards,
+    },
+  }
+}
+
+type Props = {
+  cards: ICard[]
+}
+
+export default function Home({ cards }: Props) {
+  const [cardList, setCardList] = useState(cards)
   return (
     <div className="flex min-h-screen flex-col items-center justify-center ">
       <Head>
@@ -90,77 +110,9 @@ const Home: NextPage = () => {
 
           <h1 className="text-2xl text-slate-900 mx-4">Portfolio</h1>
           <div className="flex max-w-4xl flex-wrap items-center justify-around sm:w-full">
-            <a
-              href="https://github.com/nadiakay/free-book-archive"
-              className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-            >
-              <h3 className="text-xl font-bold text-slate-900">
-                Free Book Archive &rarr;
-              </h3>
-              <p className="mt-4 text-lg">
-                Free, public domain ebook collection hosted in mobile-friendly,
-                web-readable html.
-              </p>
-              <p className="mt-4 italic text-md">
-                Javascript, React.js, Next.js
-              </p>
-            </a>
-            <a
-              href="https://github.com/nadiakay/free-book-archive"
-              className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-            >
-              <h3 className="text-xl font-bold text-slate-900">
-                Mediawiki Book Scripts &rarr;
-              </h3>
-              <p className="mt-4 text-lg">
-                A collection of scripts to process Wikisource books for use in
-                Next.js applications.
-              </p>
-              <p className="mt-4 italic text-md">Python, BeautifulSoup</p>
-            </a>
-
-            <a
-              href="https://github.com/nadiakay/huffman-code"
-              className="bg-white mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-            >
-              <h3 className="text-xl font-bold text-slate-900">
-                Huffman Code &rarr;
-              </h3>
-              <p className="mt-4 text-lg">
-                Visualization of the Huffman code algorithm.
-              </p>
-              <p className="mt-4 italic text-md">Javascript</p>
-            </a>
-
-            <a
-              href="https://github.com/nadiakay/gallerize"
-              className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-            >
-              <h3 className="text-xl font-bold text-slate-900">
-                Gallerize &rarr;
-              </h3>
-              <p className="mt-4 text-lg">
-                Public domain photo gallery. Search from millions of public
-                domain images available through Openverse API.
-              </p>
-              <p className="mt-4 italic text-md">
-                Javascript, React.js, Redux.js
-              </p>
-            </a>
-
-            <a
-              href="https://github.com/nadiakay/stream-stats"
-              className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-            >
-              <h3 className="text-xl font-bold">Stream Stats &rarr;</h3>
-              <p className="mt-4 text-lg">
-                Get info on the most popular music artists today. Data from
-                Last.fm API.
-              </p>
-              <p className="mt-4 italic text-md">
-                Javascript, React.js, Redux.js
-              </p>
-            </a>
+            {cardList.map((card) => (
+              <Card card={card} />
+            ))}
           </div>
         </section>
       </main>
@@ -178,5 +130,3 @@ const Home: NextPage = () => {
     </div>
   )
 }
-
-export default Home
