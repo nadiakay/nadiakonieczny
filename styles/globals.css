@@ -23,3 +23,7 @@
   font-style: italic;
   src: url(/fonts/CharisSIL-Italic.woff2);
 }
+
+li {
+  margin: 0;
+}
