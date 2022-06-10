@@ -1,17 +1,38 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
 const Footer = ({}) => {
   return (
     <footer className="flex flex-col border-t border-slate-300 h-24 mb-8 w-full items-center justify-center">
       <ul className="flex space-x-6 my-6 flex-row">
         <li>
-          <Image src="/assets/GitHub-Mark-32px.png" width={32} height={32} />
+          <Link href="https://github.com/nadiakay">
+            <a>
+              <Image
+                src="/assets/GitHub-Mark-32px.png"
+                width={32}
+                height={32}
+              />
+            </a>
+          </Link>
         </li>
         <li>
-          <Image src="/assets/icons8-email-64.png" width={32} height={32} />
+          <Link href="mailto:nadiakonieczny@outlook.com">
+            <a>
+              <Image src="/assets/icons8-email-64.png" width={32} height={32} />
+            </a>
+          </Link>
         </li>
         <li>
-          <Image src="/assets/icons8-linkedin-64.png" width={32} height={32} />
+          <Link href="https://www.linkedin.com/in/nadia-konieczny-0a8367217">
+            <a>
+              <Image
+                src="/assets/icons8-linkedin-64.png"
+                width={32}
+                height={32}
+              />
+            </a>
+          </Link>
         </li>
       </ul>
       <a

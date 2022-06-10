@@ -27,7 +27,7 @@ export default function Home({
   return (
     <div className="flex w-full min-h-screen flex-col items-center justify-center ">
       <Head>
-        <title>Index - Nadia Konieczny</title>
+        <title>Nadia Konieczny - Web Developer Portfolio</title>
         <link
           rel="apple-touch-icon"
           sizes="180x180"
@@ -58,14 +58,40 @@ export default function Home({
       <Nav />
 
       <h1 className="font-serif italic font-b text-gray-100 text-4xl w-full px-8 p-5 bg-gradient-to-r from-fuchsia-500 to-blue-500 border-b-2">
-        <a href="./index.html">Nadia Konieczny</a>
+        <a href="/">Nadia Konieczny</a>
       </h1>
 
       <Hero />
       <main className="max-w-5xl mx-auto font-sans text-slate-700 z-40 flex w-full flex-1 flex-col items-center justify-center px-2 pb-8 md:px-20">
-        <section className="text-lg">
+        <section className="text-lg" id="about">
           <h1 className="text-2xl text-slate-900 mt-6 mb-12 text-center">
             About
+          </h1>
+
+          <p className="mx-8 mb-8 leading-relaxed">
+            Hello! I'm a computer science student at the University of
+            Minnesota. I've worked on a number of independent projects, mostly
+            in Javascript and Typescript using the React framework. I'm
+            passionate about learning new skills and technologies and eager to
+            work on projects with others.
+          </p>
+        </section>
+        <section className="text-lg" id="portfolio">
+          <h1 className="text-2xl text-slate-900 my-6 text-center">
+            Portfolio
+          </h1>
+          <div className="flex max-w-4xl flex-wrap items-center justify-around max-w-full">
+            {cardList.map((card) => (
+              <Card card={card} />
+            ))}
+          </div>
+        </section>
+        <section className="min-w-full" id="contact">
+          <h1
+            className="text-2xl text-slate-900 my-6 text-center"
+            id="portfolio"
+          >
+            Contact
           </h1>
           <div className="flex flex-col space-y-2 px-4 md:px-0 md:flex-row justify-between mb-8">
             <div className="flex flex-col text-left space-y-2">
@@ -84,24 +110,6 @@ export default function Home({
                 </a>
               </p>
             </div>
-          </div>
-
-          <p className="mx-8 mb-8 leading-relaxed">
-            Hello! I'm a computer science student at the University of
-            Minnesota. My experience is primarily in Javascript and Typescript
-            using the React framework. I aim to create beautiful and accessible
-            interfaces. I'm passionate about learning new skills and
-            technologies.
-          </p>
-        </section>
-        <section className="text-lg">
-          <h1 className="text-2xl text-slate-900 my-6 text-center">
-            Portfolio
-          </h1>
-          <div className="flex max-w-4xl flex-wrap items-center justify-around max-w-full">
-            {cardList.map((card) => (
-              <Card card={card} />
-            ))}
           </div>
         </section>
       </main>
