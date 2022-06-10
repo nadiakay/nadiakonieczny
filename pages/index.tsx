@@ -1,4 +1,6 @@
 import type { NextPage } from 'next'
+
+import type { InferGetStaticPropsType } from 'next'
 import { useState } from 'react'
 import Head from 'next/head'
 import Nav from '../components/Nav'
@@ -18,11 +20,9 @@ export async function getStaticProps() {
   }
 }
 
-type Props = {
-  cards: ICard[]
-}
-
-export default function Home({ cards }: Props) {
+export default function Home({
+  cards,
+}: InferGetStaticPropsType<typeof getStaticProps>) {
   const [cardList, setCardList] = useState(cards)
   return (
     <div className="flex w-full min-h-screen flex-col items-center justify-center ">
@@ -57,13 +57,16 @@ export default function Home({ cards }: Props) {
       </Head>
       <Nav />
 
-      <h1 className="font-serif italic font-b text-gray-100 text-3xl w-full px-8 p-5 bg-gradient-to-r from-fuchsia-500 to-blue-500 border-b-2">
+      <h1 className="font-serif italic font-b text-gray-100 text-4xl w-full px-8 p-5 bg-gradient-to-r from-fuchsia-500 to-blue-500 border-b-2">
         <a href="./index.html">Nadia Konieczny</a>
       </h1>
 
       <Hero />
       <main className="max-w-5xl mx-auto font-sans text-slate-700 z-40 flex w-full flex-1 flex-col items-center justify-center px-2 pb-8 md:px-20">
         <section className="text-lg">
+          <h1 className="text-2xl text-slate-900 mt-6 mb-12 text-center">
+            About
+          </h1>
           <div className="flex flex-col space-y-2 px-4 md:px-0 md:flex-row justify-between mb-8">
             <div className="flex flex-col text-left space-y-2">
               <p>Nadia Konieczny</p>
@@ -90,8 +93,11 @@ export default function Home({ cards }: Props) {
             interfaces. I'm passionate about learning new skills and
             technologies.
           </p>
-
-          <h1 className="text-2xl text-slate-900 mx-4">Portfolio</h1>
+        </section>
+        <section className="text-lg">
+          <h1 className="text-2xl text-slate-900 my-6 text-center">
+            Portfolio
+          </h1>
           <div className="flex max-w-4xl flex-wrap items-center justify-around max-w-full">
             {cardList.map((card) => (
               <Card card={card} />

@@ -3,11 +3,11 @@ import Image from 'next/image'
 const Footer = ({}) => {
   return (
     <footer className="flex flex-col border-t border-slate-300 h-24 mb-8 w-full items-center justify-center">
-      <ul className="flex flex-col space-x-6 my-6 md:flex-row">
+      <ul className="flex space-x-6 my-6 flex-row">
         <li>
           <Image src="/assets/GitHub-Mark-32px.png" width={32} height={32} />
         </li>
-        <li className="ml-0">
+        <li>
           <Image src="/assets/icons8-email-64.png" width={32} height={32} />
         </li>
         <li>
