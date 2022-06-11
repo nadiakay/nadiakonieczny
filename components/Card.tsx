@@ -2,11 +2,11 @@ import * as React from 'react'
 
 import { ICard } from '../types'
 
-type Props = {
+type CardProps = {
   card: ICard
 }
 
-const Card = ({ card }: Props) => {
+const Card = ({ card }: CardProps) => {
   return (
     <a
       href={card.link}
@@ -22,7 +22,7 @@ const Card = ({ card }: Props) => {
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <path d="M2 2L11 11.5L2 21" stroke="black" stroke-width="4"></path>
+          <path d="M2 2L11 11.5L2 21" stroke="black" strokeWidth="4"></path>
         </svg>
       </h3>
       <p className="mt-4 text-lg">{card.desc}</p>

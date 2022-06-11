@@ -1,11 +1,10 @@
-import type { NextPage } from 'next'
-
 import type { InferGetStaticPropsType } from 'next'
 import { useState } from 'react'
 import Head from 'next/head'
 import Nav from '../components/Nav'
 import Hero from '../components/Hero'
 import Footer from '../components/Footer'
+import Canvas from '../components/Canvas'
 import Card from '../components/Card'
 import { ICard } from '../types'
 import { data } from '../data'
