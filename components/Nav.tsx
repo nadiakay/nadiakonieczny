@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import Image from 'next/image'
 
 const Nav = ({}) => {
   return (
@@ -7,7 +6,7 @@ const Nav = ({}) => {
       <span>
         <Link href="/">
           <a>
-            <Image src="/favicon/favicon-32x32.png" width={32} height={32} />
+            <img src="/favicon/favicon-32x32.png" width={32} height={32} />
           </a>
         </Link>
       </span>
